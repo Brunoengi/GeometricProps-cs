@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/GeometricProps/">
+    <Project Path="src/GeometricProps.Domain/GeometricProps.Domain.csproj" />
+  </Folder>
+  <Project Path="src/GeometricProps.Application/GeometricProps.Application.csproj" />
+  <Project Path="tests/GeometricProps.Application.Tests/GeometricProps.Application.Tests.csproj" />
+</Solution>
