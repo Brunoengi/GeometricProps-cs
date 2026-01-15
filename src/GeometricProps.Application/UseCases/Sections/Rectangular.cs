@@ -11,18 +11,16 @@ namespace GeometricProps.Application.UseCases.Sections
     {
         public IDistance bw { get; }
         public IDistance h { get; }
-        public IGeometricProps geometricProps { get; }
 
-        // Corrigido: lista de IBidimensionalPoint, não Dictionary
-        public List<IBidimensionalPoint> points { get; }
+        public IGeometricProps GeometricProps { get; }
+        public List<IBidimensionalPoint> Points { get; }
 
         public Rectangular(Dictionary<RectangularProperty, IDistance> props)
         {
             this.bw = props[RectangularProperty.bw];
             this.h = props[RectangularProperty.h];
-
-            // Criando os vértices do retângulo
-            this.points = new List<IBidimensionalPoint>
+            
+            this.Points = new List<IBidimensionalPoint>
             {
                 new BidimensionalPoint(0, 0),             
                 new BidimensionalPoint(bw.Value, 0),      
@@ -31,7 +29,7 @@ namespace GeometricProps.Application.UseCases.Sections
                 new BidimensionalPoint(0, 0)              
             };
 
-            this.geometricProps = new GeometricProps2D(this.points);
+            this.GeometricProps = new GeometricProps2D(this.Points);
         }
     }   
 }
