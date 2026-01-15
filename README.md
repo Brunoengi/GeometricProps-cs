@@ -78,24 +78,52 @@ Recebe uma lista ordenada de pontos que definem o contorno de uma figura plana. 
 - **Xg**: Coordenada X do centroide
 - **Yg**: Coordenada Y do centroide
 
-### Rectangular (Use Case)
+### Seções Padronizadas (Use Cases)
 
-A classe `Rectangular` implementa um caso de uso específico para cálculo de propriedades de retângulos.
+O projeto fornece implementações prontas para seções transversais comuns no namespace `GeometricProps.Application.UseCases.Sections`.
+
+#### 1. Retangular (`Rectangular`)
 
 **Construtor:**
 ```csharp
 public Rectangular(Dictionary<RectangularProperty, IDistance> props)
 ```
 
-**Parâmetros:**
-- `RectangularProperty.bw`: Largura (base) do retângulo
-- `RectangularProperty.h`: Altura do retângulo
+**Parâmetros (`RectangularProperty`):**
+- `bw`: Largura (base)
+- `h`: Altura
 
-**Propriedades:**
-- `bw`: Largura do retângulo
-- `h`: Altura do retângulo
-- `points`: Lista de vértices do retângulo
-- `geometricProps`: Instância de `GeometricProps2D` com as propriedades calculadas
+#### 2. Seção T (`TWithoutCorbel`)
+
+Representa uma seção em forma de T.
+
+**Construtor:**
+```csharp
+public TWithoutCorbel(Dictionary<TWithoutCorbelProperty, IDistance> props)
+```
+
+**Parâmetros (`TWithoutCorbelProperty`):**
+- `bf`: Largura da mesa (flange)
+- `hf`: Altura da mesa
+- `bw`: Largura da alma (web)
+- `h`: Altura total
+
+#### 3. Seção I (`IWithoutCorbel`)
+
+Representa uma seção em forma de I (pode ser assimétrica).
+
+**Construtor:**
+```csharp
+public IWithoutCorbel(Dictionary<IWithoutCorbelProperty, IDistance> props)
+```
+
+**Parâmetros (`IWithoutCorbelProperty`):**
+- `bf`: Largura da mesa superior
+- `hf`: Altura da mesa superior
+- `bw`: Largura da alma
+- `bi`: Largura da mesa inferior
+- `hi`: Altura da mesa inferior
+- `h`: Altura total
 
 ## 💡 Exemplos de Uso
 
@@ -203,7 +231,7 @@ Para um polígono fechado, as propriedades são calculadas como:
 
 ## 🧪 Testes
 
-O projeto inclui testes unitários em `GeometricProps.Application.Tests`:
+O projeto inclui testes de integração em `GeometricProps.Application.Tests`:
 
 ```csharp
 [Fact]
