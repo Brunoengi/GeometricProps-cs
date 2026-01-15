@@ -74,7 +74,5 @@ public class RectangularTests
         Assert.Equal(-12000, rect.geometricProps.W1);
         Assert.Equal(12000, rect.geometricProps.W2);
         Assert.Equal(60, rect.geometricProps.Height);
-
-
     }
 }

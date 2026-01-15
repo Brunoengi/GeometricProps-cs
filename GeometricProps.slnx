@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Itens de Solução/">
+    <File Path="README.md" />
+  </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/GeometricProps/">
     <Project Path="src/GeometricProps.Domain/GeometricProps.Domain.csproj" />
