@@ -27,7 +27,13 @@ GeometricProps/
 │   └── GeometricProps.Application/
 │       └── UseCases/
 │           └── Sections/
-│               └── Rectangular.cs
+│               ├── Rectangular.cs
+│               ├── T/
+│               │   ├── TWithoutCorbel.cs
+│               │   └── TTriangularCorbel.cs
+│               └── I/
+│                   ├── IWithoutCorbel.cs
+│                   └── ITriangularCorbel.cs
 └── tests/
     └── GeometricProps.Application.Tests/
 ```
