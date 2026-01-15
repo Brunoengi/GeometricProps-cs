@@ -23,7 +23,13 @@ GeometricProps/
 │   │   │   ├── IBidimensionalPoint.cs
 │   │   │   └── IUnits.cs
 │   │   └── Enums/
-│   │       └── RectangularProperty.cs
+│   │       ├── RectangularProperty.cs
+│   │       ├── T/
+│   │       │   ├── TWithoutCorbel.cs
+│   │       │   └── TTriangularCorbel.cs
+│   │       └── I/
+│   │           ├── IWithoutCorbelProperty.cs
+│   │           └── ITriangularCorbelProperty.cs
 │   └── GeometricProps.Application/
 │       └── UseCases/
 │           └── Sections/
